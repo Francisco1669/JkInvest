@@ -20,37 +20,37 @@ export function Navbar() {
   const navLinks = [
     { name: 'Como funciona', href: '#como-funciona' },
     { name: 'Educação', href: '#educacao' },
-    { name: 'Sobre nós', href: '#sobre' },
+    { name: 'Sobre', href: '#sobre' },
     { name: 'App', href: '#app' },
   ];
 
   return (
     <nav
-      className={`fixed top-12 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[calc(100%-2rem)] md:w-auto ${
-        isScrolled ? 'shadow-xl' : 'shadow-lg'
-      }`}
-      style={{ maxWidth: '50%', minWidth: '320px' }}
+      className={`fixed top-12 left-1/2 -translate-x-1/2 z-50 transition-all duration-300
+        w-[calc(100%-1.5rem)] sm:w-[calc(100%-3rem)] md:w-auto lg:w-auto xl:w-auto
+        ${isScrolled ? 'shadow-2xl' : 'shadow-xl'}`}
     >
       <div
-        className={`backdrop-blur-md bg-white/95 border border-gray-200/50 rounded-2xl px-6 py-4 transition-all duration-300 ${
-          isScrolled ? 'bg-white/98' : ''
-        }`}
+        className={`backdrop-blur-md bg-white/95 border border-gray-200/50 rounded-2xl
+          px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5
+          transition-all duration-300 ${isScrolled ? 'bg-white/98' : ''}
+          md:min-w-[700px] lg:min-w-[900px] xl:min-w-[1000px] max-w-[95vw]`}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-4">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2 group">
-            <div className="text-2xl font-bold text-graphite group-hover:text-primary-blue transition-colors">
+          <a href="/" className="flex items-center shrink-0 group">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-graphite group-hover:text-primary-blue transition-colors whitespace-nowrap">
               JK <span className="text-gold">Bank</span>
             </div>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-graphite hover:text-primary-blue transition-colors"
+                className="text-sm xl:text-base font-medium text-graphite hover:text-primary-blue transition-colors whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -58,8 +58,8 @@ export function Navbar() {
           </div>
 
           {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
-            <Button variant="primary" size="sm">
+          <div className="hidden lg:block shrink-0">
+            <Button variant="primary" size="md">
               Abrir conta
             </Button>
           </div>
@@ -67,7 +67,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-graphite hover:text-primary-blue transition-colors"
+            className="lg:hidden p-2 -mr-2 text-graphite hover:text-primary-blue transition-colors"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -76,22 +76,22 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden mt-6 pt-6 border-t border-gray-200 space-y-4 animate-fadeIn">
+          <div className="lg:hidden mt-6 pt-6 border-t border-gray-200 space-y-3 animate-fadeIn">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block text-base font-medium text-graphite hover:text-primary-blue transition-colors py-2"
+                className="block text-base font-medium text-graphite hover:text-primary-blue transition-colors py-2.5 px-2 rounded-lg hover:bg-gray-50"
               >
                 {link.name}
               </a>
             ))}
             <div className="pt-4 flex flex-col gap-3">
-              <Button variant="primary" size="md" className="w-full">
+              <Button variant="primary" size="md" className="w-full justify-center">
                 Abrir conta
               </Button>
-              <Button variant="outline" size="md" className="w-full">
+              <Button variant="outline" size="md" className="w-full justify-center">
                 <Smartphone className="mr-2 w-4 h-4" />
                 Baixar app
               </Button>
