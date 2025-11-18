@@ -11,12 +11,12 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="space-y-4">
-            <div className="relative h-12 w-32">
+            <div className="relative h-12 w-32 bg-white rounded-lg p-2">
               <Image
                 src="/logos/logo jk.jpg"
                 alt="JK Bank"
                 fill
-                className="object-contain object-left brightness-0 invert"
+                className="object-contain object-center"
               />
             </div>
             <p className="text-sm text-gray-400">

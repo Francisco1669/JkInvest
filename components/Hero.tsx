@@ -25,11 +25,11 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="primary" className="group">
+              <Button size="lg" variant="primary" className="group" href="/contato">
                 Abrir conta agora
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="group">
+              <Button size="lg" variant="outline" className="group" href="#app">
                 <Smartphone className="mr-2 w-5 h-5" />
                 Baixar o app
               </Button>

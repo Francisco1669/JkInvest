@@ -17,11 +17,11 @@ export function FinalCTA() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <Button size="lg" variant="secondary" className="group">
+          <Button size="lg" variant="secondary" className="group" href="/contato">
             Criar conta em 2 minutos
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-graphite">
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-graphite" href="/contato">
             Falar com especialista
           </Button>
         </div>

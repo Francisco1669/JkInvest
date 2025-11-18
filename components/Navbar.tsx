@@ -45,7 +45,7 @@ export function Navbar() {
               alt="JK Bank"
               width={120}
               height={40}
-              className="h-8 sm:h-10 lg:h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              className="h-8 sm:h-10 lg:h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105 rounded-lg"
               priority
             />
           </a>
@@ -65,7 +65,7 @@ export function Navbar() {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block shrink-0">
-            <Button variant="primary" size="md">
+            <Button variant="primary" size="md" href="/contato">
               Abrir conta
             </Button>
           </div>
@@ -94,10 +94,10 @@ export function Navbar() {
               </a>
             ))}
             <div className="pt-4 flex flex-col gap-3">
-              <Button variant="primary" size="md" className="w-full justify-center">
+              <Button variant="primary" size="md" className="w-full justify-center" href="/contato">
                 Abrir conta
               </Button>
-              <Button variant="outline" size="md" className="w-full justify-center">
+              <Button variant="outline" size="md" className="w-full justify-center" href="#app">
                 <Smartphone className="mr-2 w-4 h-4" />
                 Baixar app
               </Button>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -7,6 +8,7 @@ interface ButtonProps {
   href?: string;
   onClick?: () => void;
   className?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export function Button({
@@ -15,7 +17,8 @@ export function Button({
   size = 'md',
   href,
   onClick,
-  className = ''
+  className = '',
+  type = 'button'
 }: ButtonProps) {
   const baseStyles = 'inline-flex items-center justify-center font-semibold transition-all duration-300 rounded-lg';
 
@@ -34,15 +37,23 @@ export function Button({
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (href) {
+    // Use Link para navegação interna, <a> para links externos
+    if (href.startsWith('/')) {
+      return (
+        <Link href={href} className={classes}>
+          {children}
+        </Link>
+      );
+    }
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
         {children}
       </a>
     );
   }
 
   return (
-    <button onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes}>
       {children}
     </button>
   );
