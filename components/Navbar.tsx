@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Menu, X, Smartphone } from 'lucide-react';
 import { Button } from './Button';
 
@@ -38,10 +39,15 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
-          <a href="/" className="flex items-center shrink-0 group">
-            <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-graphite group-hover:text-primary-blue transition-colors whitespace-nowrap">
-              JK <span className="text-gold">Bank</span>
-            </div>
+          <a href="/" className="flex items-center shrink-0 group relative">
+            <Image
+              src="/logos/logo jk.jpg"
+              alt="JK Bank"
+              width={120}
+              height={40}
+              className="h-8 sm:h-10 lg:h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              priority
+            />
           </a>
 
           {/* Desktop Navigation */}

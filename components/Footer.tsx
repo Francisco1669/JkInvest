@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 
 export function Footer() {
@@ -10,8 +11,13 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Logo e descrição */}
           <div className="space-y-4">
-            <div className="text-2xl font-bold text-white">
-              JK <span className="text-gold">Bank</span>
+            <div className="relative h-12 w-32">
+              <Image
+                src="/logos/logo jk.jpg"
+                alt="JK Bank"
+                fill
+                className="object-contain object-left brightness-0 invert"
+              />
             </div>
             <p className="text-sm text-gray-400">
               Antecipação de recebíveis com rapidez, segurança e sem burocracia.
