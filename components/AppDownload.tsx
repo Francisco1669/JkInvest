@@ -4,7 +4,7 @@ import { Apple, Smartphone } from 'lucide-react';
 
 export function AppDownload() {
   return (
-    <Section background="white">
+    <Section background="white" id="app">
       <div className="max-w-5xl mx-auto">
         <div className="bg-gradient-to-br from-primary-blue to-primary-blue/80 rounded-3xl overflow-hidden shadow-2xl">
           <div className="grid md:grid-cols-2 gap-12 items-center p-12 md:p-16">

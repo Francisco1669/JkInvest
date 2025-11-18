@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { HowItWorks } from '@/components/HowItWorks';
 import { EducationalSection } from '@/components/EducationalSection';
@@ -8,14 +9,17 @@ import { Footer } from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <HowItWorks />
-      <EducationalSection />
-      <SocialProof />
-      <AppDownload />
-      <FinalCTA />
-      <Footer />
-    </main>
+    <>
+      <Navbar />
+      <main className="min-h-screen">
+        <Hero />
+        <HowItWorks />
+        <EducationalSection />
+        <SocialProof />
+        <AppDownload />
+        <FinalCTA />
+        <Footer />
+      </main>
+    </>
   );
 }

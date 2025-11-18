@@ -22,8 +22,17 @@ export function SocialProof() {
     },
   ];
 
+  const cardBrands = [
+    { name: 'Visa', color: 'bg-blue-600' },
+    { name: 'Mastercard', color: 'bg-orange-600' },
+    { name: 'Hipercard', color: 'bg-red-600' },
+    { name: 'Elo', color: 'bg-yellow-500' },
+    { name: 'Amex', color: 'bg-blue-500' },
+    { name: 'Cabal', color: 'bg-purple-600' },
+  ];
+
   return (
-    <Section background="gray">
+    <Section background="gray" id="sobre">
       <div className="text-center space-y-12">
         <div className="space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-graphite">
@@ -69,14 +78,26 @@ export function SocialProof() {
           })}
         </div>
 
-        {/* Logos placeholder */}
+        {/* Card Brands */}
         <div className="pt-12">
           <p className="text-sm text-gray-500 mb-8 uppercase tracking-wider">
-            Parceiros e certificações
+            Bandeiras aceitas nas máquinas JK Bank
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-40">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="w-32 h-16 bg-gray-300 rounded-lg"></div>
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            {cardBrands.map((brand, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 min-w-[140px] group hover:scale-105"
+              >
+                <div className="flex flex-col items-center space-y-3">
+                  <div className={`w-12 h-12 ${brand.color} rounded-lg flex items-center justify-center shadow-lg`}>
+                    <div className="w-8 h-6 bg-white rounded opacity-90"></div>
+                  </div>
+                  <span className="text-sm font-semibold text-graphite group-hover:text-primary-blue transition-colors">
+                    {brand.name}
+                  </span>
+                </div>
+              </div>
             ))}
           </div>
         </div>

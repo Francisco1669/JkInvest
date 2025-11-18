@@ -23,7 +23,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <Section background="gray">
+    <Section background="gray" id="como-funciona">
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold text-graphite mb-4">
           Como funciona a antecipação?
