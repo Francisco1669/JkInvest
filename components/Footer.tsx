@@ -29,17 +29,17 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Produtos</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="#sobre" className="hover:text-gold transition-colors">
                   Antecipação de Recebíveis
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="#educacao" className="hover:text-gold transition-colors">
                   Securitização
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="/contato" className="hover:text-gold transition-colors">
                   Capital de Giro
                 </a>
               </li>
@@ -51,23 +51,18 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Empresa</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="#sobre" className="hover:text-gold transition-colors">
                   Sobre nós
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-gold transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gold transition-colors">
-                  Carreiras
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-gold transition-colors">
+                <a href="/contato" className="hover:text-gold transition-colors">
                   Contato
+                </a>
+              </li>
+              <li>
+                <a href="#app" className="hover:text-gold transition-colors">
+                  Baixar App
                 </a>
               </li>
             </ul>
@@ -101,7 +96,9 @@ export function Footer() {
                 <Instagram className="w-5 h-5 text-gray-400 group-hover:text-graphite" />
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/company/jkbank"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center hover:bg-gold transition-colors group"
               >
                 <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-graphite" />
@@ -114,11 +111,8 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>&copy; {currentYear} JK Bank. Todos os direitos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gold transition-colors">
-              Política de Privacidade
-            </a>
-            <a href="#" className="hover:text-gold transition-colors">
-              Termos de Uso
+            <a href="/contato" className="hover:text-gold transition-colors">
+              Fale Conosco
             </a>
           </div>
         </div>
